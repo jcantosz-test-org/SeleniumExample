@@ -21,7 +21,12 @@ jobs:
       run: |
         nuget restore
         dotnet restore
-    - name: Build
+    - name: retore
+      run: |
+        nuget restore SeleniumExample.sln
+        cd GuiTests
+        nuget restore
+    - name: build
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
