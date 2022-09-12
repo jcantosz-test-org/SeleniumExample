@@ -31,7 +31,7 @@ jobs:
     - name: build
 #       run: dotnet build --no-restore
       run: |
-        nuget Update-Package –reinstall Newtonsoft.Json
+        nuget install Newtonsoft.Json
         dotnet build
     - name: Test
       run: dotnet test --no-build --verbosity normal
