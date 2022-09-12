@@ -13,26 +13,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-#     - name: Setup .NET
-#       uses: actions/setup-dotnet@v2
-#       with:
-#         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: |
         nuget restore
         dotnet restore
-#     - name: retore
-#       run: |
-#         nuget restore SeleniumExample.sln
-#         cd GuiTests
-#         nuget restore
     - name: dir
       run: dir
     - name: build
-#       run: dotnet build --no-restore
       run: |
-        # cd GuiTests
-        # nuget install Newtonsoft.Json
-        dotnet build
+        dotnet build --verbosity=detailed
     - name: Test
       run: dotnet test --no-build --verbosity normal
