@@ -17,3 +17,4 @@ Out of the box Selenium supports locating elements using the element id or an xp
     _driver.FindElementByJQuery("input[name='btnSubmit']")
 
 Alexander van Trijffel
+
